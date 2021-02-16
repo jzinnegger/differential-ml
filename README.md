@@ -10,7 +10,7 @@ Main features of the notebook come with the use of the Keras model framework in 
 
 The original implementation in [[2]](https://github.com/differential-machine-learning) includes an example of an equity basket priced with a Bachielier model. The generating model is reused in the notebook. Huge/Savine describe a powerful *differential PCA* as a pre-processing step on values and differentials. This notebook takes an ad-hoc approach and implements an __autoencoder__ as the first layer, specifically to limit the dimensions to the (hopefully) most important latent variables.
 
-![BS Example](illustration.png)
+![BS Example](illustration_1.png)
 
 The tensorboard logs of the training are available at [tensorboard.dev](https://tensorboard.dev/experiment/u9IjyZK6RgqjvIj16sQdyA/) for interactive analysis.
 
