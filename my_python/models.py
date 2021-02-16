@@ -278,6 +278,7 @@ class L2ScaledMSE(keras.losses.Loss):
         return tf.math.reduce_mean(tf.square((y_true  - y_pred) * self.norm_weights))
 
 """### Compile model"""
+log_dir = "tb_logs/"
 
 def build_and_compile_model(
         input_dim,
