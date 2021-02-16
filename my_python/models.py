@@ -278,7 +278,7 @@ class L2ScaledMSE(keras.losses.Loss):
         return tf.math.reduce_mean(tf.square((y_true  - y_pred) * self.norm_weights))
 
 """### Compile model"""
-log_dir = "tensorboard_logs/"
+
 
 def build_and_compile_model(
         input_dim,
@@ -616,7 +616,7 @@ def train_model(model,
         batch_size = batch_size,
         epochs=epochs,
         callbacks=[
-                   tf.keras.callbacks.TensorBoard(log_dir = log_dir+train_id, histogram_freq=1),
+                   #tf.keras.callbacks.TensorBoard(log_dir = log_dir+train_id, histogram_freq=1),
                    tf.keras.callbacks.EarlyStopping(monitor='loss',patience=100),
                    TqdmCallback(verbose=1)
                    ],
