@@ -283,13 +283,16 @@ def build_and_compile_model(
         input_dim,
         model_getter,
         scaled_MSE,
-        differential_weight,
-        lr_schedule = lr_warmup
+        differential_weight=1,
+        lr_schedule = lr_warmup,
+        alpha = None
     ):
 
     model = model_getter(input_dim)
-    alpha = 1.0 / (1.0 + differential_weight * input_dim)
-    # alpha = 0.5
+    if alpha is not None:
+        alpha = 1.0 / (1.0 + differential_weight * input_dim)
+    else:
+        alpha = alpha
 
 
     # build model
